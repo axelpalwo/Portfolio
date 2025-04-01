@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    text-align: center;
+}
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    background: #333;
+    color: white;
+    padding: 20px;
+    font-size: 1.6rem;
+}
+ul {
+    display: flex;
+    list-style: none;
+}
+li {
+    margin: 15px;
+}
+a:link {
+    color: white
+}
+a:visited {
+    color: white
+}
+section {
+    margin: 20px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+#projects {
+    height: 0px;
+}
+.project {
+    width: 300px;
+    margin: 10px;
+    padding: 15px;
+    background: #ddd;
+}
+.project-title{
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+footer {
+    background: #333;
+    color: white;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+#projects-container {
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 0; /* Elimina el relleno interno */
+    max-width: 1200px; /* Ajusta el ancho máximo si es necesario */
+}
+
+.carousel-inner {
+    margin: 0; /* Elimina márgenes internos */
+    padding: 0; /* Elimina relleno interno */
+}
+
+.carousel-item img {
+    object-fit: cover; /* Ajusta cómo se muestran las imágenes */
+    max-height: 500px; /* Limita la altura máxima */
+    width: 100%; /* Asegura que las imágenes ocupen todo el ancho */
+}
+
+.little-div {
+    height: 10vh;
+}
+
+#skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 0; /* Elimina el relleno interno */
+    max-width: 1200px; /* Ajusta el ancho máximo si es necesario */
+}
+
+.skill-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Cambia la dirección a columna */
+    margin: 10px; /* Espacio entre las cajas de habilidades */
+    padding: 10px; /* Espacio interno */
+    background: #f0f0f0; /* Fondo gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+.skill-img {
+    width: 120px; /* Ajusta el ancho de las imágenes */
+    height: 120px; /* Ajusta la altura de las imágenes */
+    margin: 10px; /* Espacio entre las imágenes */
+    object-fit: contain; /* Asegura que las imágenes mantengan su proporción */
+}
