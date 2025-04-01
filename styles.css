@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    font-size: 10px;
+    font-size: 10px; /* Base para escalado */
     margin: 0;
     padding: 0;
     background: #f4f4f4;
@@ -10,15 +10,22 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 100px;
+    height: auto; /* Ajusta la altura automáticamente */
     display: flex;
+    align-items: center;
     justify-content: space-between;
     background: #333;
     color: white;
-    padding: 20px;
+    padding: 10px;
+    text-align: center;
     font-size: 1.6rem;
     z-index: 1000;
 }
+
+header ul {
+    gap: 10px; /* Espacio entre los elementos */
+}
+
 h2 {
     font-size: 2rem; /* Ajusta el tamaño del texto */
     font-weight: bold; /* Asegura que el texto sea negrita */
@@ -84,6 +91,19 @@ footer {
     width: 100%; /* Asegura que las imágenes ocupen todo el ancho */
 }
 
+.carousel-item img,
+.carousel-item iframe,
+.carousel-item video {
+    max-height: 300px; /* Reduce la altura en pantallas pequeñas */
+}
+.aboutme-text {
+    font-size: 1rem; /* Ajusta el tamaño del texto */
+    line-height: 1.5; /* Mejora la legibilidad */
+    text-align: center; /* Alinea el texto para que se vea más ordenado */
+    word-wrap: break-word; /* Permite que las palabras largas se ajusten */
+    overflow-wrap: break-word; /* Asegura que las palabras largas se ajusten */
+    height: auto; /* Permite que el contenedor crezca según el contenido */
+}
 .little-div {
     height: 10vh;
 }
@@ -127,6 +147,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column; /* Cambia a diseño vertical */
     gap: 20px; /* Espacio entre el texto y la imagen */
 }
 
@@ -141,7 +162,7 @@ footer {
 
 .aboutme-photo img {
     width: 100%; /* La imagen ocupa todo el ancho del contenedor */
-    max-width: 200px; /* Tamaño máximo de la imagen */
+    max-width: 150px; /* Reduce el tamaño de la imagen */
     border-radius: 10px; /* Bordes redondeados */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para la imagen */
 }
@@ -209,4 +230,156 @@ footer {
 
 .contact-item a:hover {
     color: #007bff; /* Cambia el color al pasar el mouse */
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 8px; /* Reduce el tamaño base en pantallas pequeñas */
+    }
+    .carousel-item img,
+    .carousel-item iframe,
+    .carousel-item video {
+        max-height: 300px; /* Reduce la altura en pantallas pequeñas */
+    }
+    .aboutme-container {
+        flex-direction: column; /* Cambia a diseño vertical */
+        gap: 20px;
+    }
+    .contact-item {
+        flex-direction: column; /* Cambia a diseño vertical */
+        text-align: center;
+    }
+    header {
+        flex-direction: column; /* Cambia a diseño vertical */
+        align-items: center; /* Centra los elementos */
+        padding: 15px; /* Ajusta el relleno */
+    }
+
+    .little-div{
+        height: 35vh;
+    }
+    header ul {
+        flex-direction: column; /* Cambia la lista de navegación a vertical */
+        gap: 10px; /* Espacio entre los elementos */
+        margin: 0; /* Elimina márgenes */
+        padding: 0; /* Elimina relleno */
+    }
+
+    header li {
+        margin: 5px 0; /* Espacio entre los elementos de la lista */
+    }
+
+    header a {
+        font-size: 1.4rem; /* Ajusta el tamaño del texto */
+    }
+
+    
+    #aboutme-section {
+        padding: 15px; /* Reduce el espacio interno */
+    }
+
+    .aboutme-container {
+        flex-direction: column; /* Cambia a diseño vertical */
+        gap: 15px; /* Reduce el espacio entre el texto y la imagen */
+    }
+
+    .aboutme-text {
+        font-size: 1.2rem; /* Reduce el tamaño del texto */
+        line-height: 1.4; /* Reduce el espacio entre líneas */
+        text-align: justify; /* Alinea el texto para que se vea mejor */
+    }
+
+    .aboutme-photo img {
+        max-width: 100px; /* Reduce el tamaño de la imagen en pantallas pequeñas */
+    }
+}
+
+@media (min-width: 769px) {
+    
+    .carousel-item img,
+    .carousel-item iframe,
+    .carousel-item video {
+        max-height: 500px; /* Altura normal en pantallas grandes */
+    }
+
+    .aboutme-container {
+        flex-direction: row; /* Mantiene el diseño horizontal */
+        gap: 40px;
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        font-size: 7px; /* Reduce aún más el tamaño base del texto */
+    }
+    .mobile-fit {
+        max-width: 300px;
+        height: fit-content;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #aboutme-section .aboutme-photo #mypic {
+        width: 120px !important;
+        height: auto;
+        object-fit: contain;
+    }
+    .aboutme-text {
+        font-size: 1rem; /* Ajusta el tamaño del texto */
+        line-height: 1.5; /* Mejora la legibilidad */
+        text-align: justify; /* Alinea el texto para que se vea más ordenado */
+        word-wrap: break-word; /* Permite que las palabras largas se ajusten */
+        overflow-wrap: break-word; /* Asegura que las palabras largas se ajusten */
+        height: auto; /* Permite que el contenedor crezca según el contenido */
+    }
+    #aboutme-section {
+        padding: 10px; /* Reduce el espacio interno */
+    }
+
+    .aboutme-container {
+        flex-direction: column; /* Mantiene el diseño vertical */
+        gap: 10px; /* Reduce el espacio entre el texto y la imagen */
+    }
+
+    .aboutme-text {
+        font-size: 1rem; /* Reduce el tamaño del texto */
+        line-height: 1.3; /* Reduce el espacio entre líneas */
+        text-align: justify; /* Alinea el texto */
+    }
+
+    .aboutme-photo img {
+        max-width: 80px; /* Reduce aún más el tamaño de la imagen */
+    }
+
+    header {
+        padding: 10px; /* Reduce el relleno del header */
+    }
+
+    header ul {
+        gap: 5px; /* Reduce el espacio entre los elementos del menú */
+    }
+
+    header a {
+        font-size: 1.2rem; /* Reduce el tamaño del texto del menú */
+    }
+
+    .contact-item {
+        flex-direction: column; /* Mantiene el diseño vertical */
+        gap: 5px; /* Reduce el espacio entre íconos y texto */
+    }
+
+    .contact-icon {
+        font-size: 30px; /* Reduce el tamaño de los íconos */
+    }
+
+    .carousel-item img,
+    .carousel-item iframe,
+    .carousel-item video {
+        max-height: 200px; /* Reduce la altura de los elementos del carrusel */
+    }
+
+    .project-buttons .btn {
+        font-size: 12px; /* Reduce el tamaño de los botones */
+        padding: 5px 10px; /* Reduce el relleno de los botones */
+    }
 }
