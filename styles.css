@@ -17,6 +17,14 @@ header {
     color: white;
     padding: 20px;
     font-size: 1.6rem;
+    z-index: 1000;
+}
+h2 {
+    font-size: 2rem; /* Ajusta el tamaño del texto */
+    font-weight: bold; /* Asegura que el texto sea negrita */
+    color: #333; /* Color del texto */
+    margin-bottom: 20px; /* Espacio debajo del encabezado */
+    text-align: center; /* Centra el texto (opcional) */
 }
 ul {
     display: flex;
@@ -106,4 +114,96 @@ footer {
     height: 120px; /* Ajusta la altura de las imágenes */
     margin: 10px; /* Espacio entre las imágenes */
     object-fit: contain; /* Asegura que las imágenes mantengan su proporción */
+}
+
+#aboutme-section {
+    padding: 20px;
+}
+
+.aboutme-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre el texto y la imagen */
+}
+
+.aboutme-text {
+    flex: 1; /* El texto ocupa más espacio */
+}
+
+.aboutme-photo {
+    flex: 0 0 200px; /* La imagen tiene un ancho fijo */
+    text-align: center;
+}
+
+.aboutme-photo img {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    max-width: 200px; /* Tamaño máximo de la imagen */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para la imagen */
+}
+
+.project-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.project-buttons .btn {
+    background-color: #333;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact {
+    padding: 20px;
+    background-color: #f9f9f9; /* Fondo claro */
+    text-align: center;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Espacio entre los elementos */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los íconos y el texto */
+    justify-content: flex-start; /* Asegura que el contenido esté alineado a la izquierda */
+    gap: 15px; /* Espacio entre el ícono y el texto */
+    font-size: 18px;
+}
+
+.contact-icon {
+    font-size: 40px; /* Ajusta el tamaño del ícono */
+    color: #333; /* Color del ícono */
+    transition: color 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+.contact-icon:hover {
+    color: #007bff; /* Cambia el color al pasar el mouse */
+}
+
+.contact-icon {
+    width: 60px; /* Aumenta el ancho del ícono */
+    height: 60px; /* Aumenta la altura del ícono */
+    object-fit: contain; /* Asegura que los íconos mantengan su proporción */
+}
+
+.contact-item a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: #333; /* Color del texto */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+.contact-item a:hover {
+    color: #007bff; /* Cambia el color al pasar el mouse */
 }
