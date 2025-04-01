@@ -87,6 +87,9 @@ footer {
 .little-div {
     height: 10vh;
 }
+.little-lit-div {
+    height: 5vh;
+}
 
 #skills-container {
     display: flex;
